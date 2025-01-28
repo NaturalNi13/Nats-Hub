@@ -2,7 +2,7 @@ local verifiedUsers = loadstring(game:HttpGet("https://raw.githubusercontent.com
 local userVerified = false
 local player = game:GetService("Players").LocalPlayer
 for i, user in ipairs(verifiedUsers) do
-    if user == player.Name then
+    if string.lower(user) == string.lower(player.Name) then
         userVerified = true
     end
 end
